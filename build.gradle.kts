@@ -38,6 +38,7 @@ intellij {
 	type = properties("platformType")
 
 	// Plugin Dependencies. Uses `platformPlugins` property from the gradle.properties file.
+	// TODO figure out why we need to define dependencies both here and in plugin.xml
 	plugins = properties("platformPlugins").map { it.split(',').map(String::trim).filter(String::isNotEmpty) }
 }
 
