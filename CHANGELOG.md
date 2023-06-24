@@ -1,6 +1,6 @@
 <!-- Keep a Changelog guide -> https://keepachangelog.com -->
 
-# intellij-copy-commit-reference Changelog
+# Copy Commit Reference Changelog
 
 ## [Unreleased]
 ### Added
