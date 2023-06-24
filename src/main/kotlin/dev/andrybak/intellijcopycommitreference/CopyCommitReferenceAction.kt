@@ -67,14 +67,17 @@ class CopyCommitReferenceAction : DumbAwareAction() {
 		val task = object : Task.Backgroundable(project, actionName, true) {
 			override fun run(indicator: ProgressIndicator) {
 				val logProviders = VcsProjectLog.getLogProviders(project)
-				val size: Double = (logProviders.size * hashes.size).toDouble()
 				val result: MutableList<VcsCommitMetadata> = mutableListOf()
 				var current = 0.0
 				logProviders.forEach { (root, logProvider) ->
 					logProvider.readMetadata(root, hashes) { metadata: VcsCommitMetadata ->
 						result.add(metadata)
 						current++
-						indicator.fraction = current / size
+						if (current < hashes.size) {
+							indicator.fraction = current / hashes.size
+						} else {
+							indicator.fraction = 1.0
+						}
 					}
 				}
 				consumer.invoke(result)
