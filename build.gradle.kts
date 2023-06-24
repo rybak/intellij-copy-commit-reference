@@ -67,6 +67,7 @@ koverReport {
 tasks {
 	wrapper {
 		gradleVersion = properties("gradleVersion").get()
+		distributionType = Wrapper.DistributionType.ALL
 	}
 
 	patchPluginXml {
