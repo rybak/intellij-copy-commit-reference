@@ -22,7 +22,7 @@ import java.time.format.DateTimeFormatter
 /**
  * This context menu action provides easy access to the "reference" pretty format of Git.
  * See [Git documentation of `git-log`](https://git-scm.com/docs/git-log#_pretty_formats) for details.
- * It is similar to {@link com.intellij.openapi.vcs.history.actions.CopyRevisionNumberAction}, but with more
+ * It is similar to [com.intellij.openapi.vcs.history.actions.CopyRevisionNumberAction], but with more
  * information: the reference format includes an abbreviated hash of the commit, subject line of the commit (first line
  * of the commit message), and the date in ISO 8601 format.
  */
