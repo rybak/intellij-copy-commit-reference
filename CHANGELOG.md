@@ -2,7 +2,9 @@
 
 # Copy Commit Reference Changelog
 
-## 0.1.0-alpha.1
+## Unreleased
+
+## 0.1.0-alpha.1 - 2023-06-25
 ### Added
 - Support for "Copy Commit Reference" action in the following context menus:
   - Tool window "Git":
