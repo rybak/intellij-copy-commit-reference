@@ -5,8 +5,6 @@
     <vendor>Andrei Rybak</vendor>
 
     <depends>com.intellij.modules.platform</depends>
-    <!-- TODO figure out why we need to define dependencies both here and in build.gradle.kts -->
-    <depends>Git4Idea</depends>
 
     <actions resource-bundle="messages.ActionsBundle">
         <action
