@@ -2,6 +2,7 @@
 <idea-plugin>
     <id>dev.andrybak.intellij.copy_commit_reference</id>
     <name>Copy Commit Reference</name>
+    <!-- tag <description> is omitted, because it's populated by Gradle task `patchPluginXml` -->
     <vendor>Andrei Rybak</vendor>
 
     <depends>com.intellij.modules.platform</depends>

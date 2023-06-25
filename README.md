@@ -20,7 +20,8 @@
       `CopyRevisionNumberFromAnnotateAction`
 
 <!-- Plugin description -->
-IntelliJ Plugin to provide a context menu item "Copy commit reference".
+Provides a context menu item "Copy commit reference" in all VCS log views. It copies a reference to the commit in
+the [same format as `git log --format=reference`](https://git-scm.com/docs/git-log#_pretty_formats).
 <!-- Plugin description end -->
 
 ## Installation
