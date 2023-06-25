@@ -1,4 +1,4 @@
-package dev.andrybak.intellijcopycommitreference
+package dev.andrybak.intellij.copy_commit_reference
 
 import com.intellij.openapi.actionSystem.ActionUpdateThread
 import com.intellij.openapi.actionSystem.AnActionEvent

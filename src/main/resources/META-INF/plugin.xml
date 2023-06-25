@@ -1,15 +1,16 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
-    <id>dev.andrybak.intellijcopycommitreference</id>
+    <id>dev.andrybak.intellij.copy_commit_reference</id>
     <name>Copy Commit Reference</name>
     <vendor>Andrei Rybak</vendor>
 
     <depends>com.intellij.modules.platform</depends>
 
+    <!-- TODO maybe better to rename to avoid confusion -->
     <actions resource-bundle="messages.ActionsBundle">
         <action
                 id="devAndrybakCopyCommitReferenceAction"
-                class="dev.andrybak.intellijcopycommitreference.CopyCommitReferenceAction"
+                class="dev.andrybak.intellij.copy_commit_reference.CopyCommitReferenceAction"
                 icon="AllIcons.Actions.Copy"
         >
             <!-- https://github.com/JetBrains/intellij-community/blob/master/platform/vcs-log/impl/src/META-INF/vcs-log.xml#L174-L184 -->
