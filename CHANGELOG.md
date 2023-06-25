@@ -4,4 +4,9 @@
 
 ## [Unreleased]
 ### Added
-- Initial scaffold created from [IntelliJ Platform Plugin Template](https://github.com/JetBrains/intellij-platform-plugin-template)
+- Support for "Copy Commit Reference" action in the following context menus:
+  - Tool window "Git":
+    - Tab "Log"
+    - File history tabs
+  - Popup dialog "History for Selection"
+- Support for "Copy Commit Reference" action as a shortcut in the keymap

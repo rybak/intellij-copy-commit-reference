@@ -5,6 +5,7 @@
     <!-- Following tags are omitted, because they are populated by Gradle task `patchPluginXml`:
          - <description>
          - <idea-version>
+         - <change-notes>
     -->
     <vendor url="https://andrybak.dev">Andrei Rybak</vendor>
 
