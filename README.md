@@ -4,8 +4,25 @@
 [![Version](https://img.shields.io/jetbrains/plugin/v/22138-copy-commit-reference.svg)](https://plugins.jetbrains.com/plugin/22138-copy-commit-reference)
 [![Downloads](https://img.shields.io/jetbrains/plugin/d/22138-copy-commit-reference.svg)](https://plugins.jetbrains.com/plugin/22138-copy-commit-reference)
 
+<!-- Plugin description -->
+Provides a context menu item "Copy Commit Reference" in all VCS log views. It copies a reference to the commit in
+the [same format as `git log --format=reference`](https://git-scm.com/docs/git-log#_pretty_formats).
+<!-- Plugin description end -->
+
 Source code of the plugin is distributed under the terms of the MIT Licence.
 See [LICENSE.txt](LICENSE.txt) for details.
+
+## Installation
+
+- Using IDE built-in plugin system:
+  
+  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>Marketplace</kbd> > <kbd>Search for "Copy Commit Reference"</kbd> >
+  <kbd>Install Plugin</kbd>
+  
+- Manually:
+
+  Download the [latest release](https://github.com/rybak/intellij-copy-commit-reference/releases/latest) and install it manually using
+  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>⚙️</kbd> > <kbd>Install plugin from disk...</kbd>
 
 ## Template ToDo list
 - [x] Create a new [IntelliJ Platform Plugin Template][template] project.
@@ -24,24 +41,6 @@ See [LICENSE.txt](LICENSE.txt) for details.
     - Not feasible as of IntelliJ 2023.1, because context menu of annotations
       is custom-built.  See [usage of class `CopyRevisionNumberFromAnnotateAction` in
       `AnnotateToggleAction.java`][AnnotateToggleAction]
-
-<!-- Plugin description -->
-Provides a context menu item "Copy Commit Reference" in all VCS log views. It copies a reference to the commit in
-the [same format as `git log --format=reference`](https://git-scm.com/docs/git-log#_pretty_formats).
-<!-- Plugin description end -->
-
-## Installation
-
-- Using IDE built-in plugin system:
-  
-  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>Marketplace</kbd> > <kbd>Search for "Copy Commit Reference"</kbd> >
-  <kbd>Install Plugin</kbd>
-  
-- Manually:
-
-  Download the [latest release](https://github.com/rybak/intellij-copy-commit-reference/releases/latest) and install it manually using
-  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>⚙️</kbd> > <kbd>Install plugin from disk...</kbd>
-
 
 ---
 Plugin based on the [IntelliJ Platform Plugin Template][template].
