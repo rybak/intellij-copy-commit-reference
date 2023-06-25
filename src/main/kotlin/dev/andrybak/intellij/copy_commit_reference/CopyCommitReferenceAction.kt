@@ -84,7 +84,7 @@ class CopyCommitReferenceAction : DumbAwareAction() {
 						}
 					}
 				}
-				consumer.invoke(result)
+				consumer(result)
 				indicator.fraction = 1.0
 			}
 
