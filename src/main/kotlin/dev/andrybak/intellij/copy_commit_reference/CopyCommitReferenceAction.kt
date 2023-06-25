@@ -27,7 +27,9 @@ import java.time.format.DateTimeFormatter
 class CopyCommitReferenceAction : DumbAwareAction() {
 	override fun actionPerformed(e: AnActionEvent) {
 		getCommitMetadataFromContext(e) { listOfMetadata: List<VcsCommitMetadata> ->
-			// TODO maybe need to reverse the list
+			/* Unlike CopyCommitReferenceAction, preserve the order in which the commits appear in the GUI:
+			 * newest commits are at the top.  References are rarely copied en masse, but even when they
+			 * are, it will be easier for user to navigate the result in the same order as in the GUI. */
 			val references: List<String> = listOfMetadata.map(::commitReference)
 			CopyPasteManager.getInstance().setContents(StringSelection(references.joinToString("\n")))
 		}
