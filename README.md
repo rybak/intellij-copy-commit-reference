@@ -21,6 +21,9 @@ See [LICENSE.txt](LICENSE.txt) for details.
 ## Plugin TODO list
 - [ ] add action to the context menu of annotations, after action of class
       `CopyRevisionNumberFromAnnotateAction`
+    - Not feasible as of IntelliJ 2023.1, because context menu of annotations
+      is custom-built.  See [usage of class `CopyRevisionNumberFromAnnotateAction` in
+      `AnnotateToggleAction.java`][AnnotateToggleAction]
 
 <!-- Plugin description -->
 Provides a context menu item "Copy Commit Reference" in all VCS log views. It copies a reference to the commit in
@@ -45,3 +48,4 @@ Plugin based on the [IntelliJ Platform Plugin Template][template].
 
 [template]: https://github.com/JetBrains/intellij-platform-plugin-template
 [docs:plugin-description]: https://plugins.jetbrains.com/docs/intellij/plugin-user-experience.html#plugin-description-and-presentation
+[AnnotateToggleAction]: https://github.com/JetBrains/intellij-community/blob/master/platform/vcs-impl/src/com/intellij/openapi/vcs/actions/AnnotateToggleAction.java#L199-L202
