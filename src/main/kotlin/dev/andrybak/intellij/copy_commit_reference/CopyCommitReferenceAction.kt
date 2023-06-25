@@ -11,6 +11,7 @@ import com.intellij.openapi.project.Project
 import com.intellij.openapi.vcs.VcsDataKeys
 import com.intellij.openapi.vcs.VcsException
 import com.intellij.openapi.vcs.history.VcsRevisionNumber
+import com.intellij.vcs.log.Hash
 import com.intellij.vcs.log.VcsCommitMetadata
 import com.intellij.vcs.log.impl.VcsProjectLog
 import java.awt.datatransfer.StringSelection
@@ -72,12 +73,12 @@ class CopyCommitReferenceAction : DumbAwareAction() {
 		val task = object : Task.Backgroundable(project, actionName, true) {
 			override fun run(indicator: ProgressIndicator) {
 				val logProviders = VcsProjectLog.getLogProviders(project)
-				val result: MutableList<VcsCommitMetadata> = mutableListOf()
+				val result: MutableMap<Hash, VcsCommitMetadata> = mutableMapOf()
 				var current = 0.0
 				logProviders.forEach { (root, logProvider) ->
 					try {
 						logProvider.readMetadata(root, hashes) { metadata: VcsCommitMetadata ->
-							result.add(metadata)
+							result[metadata.id] = metadata
 							current++
 							if (current < hashes.size) {
 								indicator.fraction = current / hashes.size
@@ -92,7 +93,7 @@ class CopyCommitReferenceAction : DumbAwareAction() {
 						logger<CopyCommitReferenceAction>().warn("Couldn't load hashes $hashes from $logProvider", e)
 					}
 				}
-				consumer(result)
+				consumer(result.values.toList())
 				indicator.fraction = 1.0
 			}
 
