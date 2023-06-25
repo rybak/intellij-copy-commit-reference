@@ -9,6 +9,7 @@ import com.intellij.openapi.progress.Task
 import com.intellij.openapi.project.DumbAwareAction
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.vcs.VcsDataKeys
+import com.intellij.openapi.vcs.VcsException
 import com.intellij.openapi.vcs.history.VcsRevisionNumber
 import com.intellij.vcs.log.VcsCommitMetadata
 import com.intellij.vcs.log.impl.VcsProjectLog
@@ -74,14 +75,21 @@ class CopyCommitReferenceAction : DumbAwareAction() {
 				val result: MutableList<VcsCommitMetadata> = mutableListOf()
 				var current = 0.0
 				logProviders.forEach { (root, logProvider) ->
-					logProvider.readMetadata(root, hashes) { metadata: VcsCommitMetadata ->
-						result.add(metadata)
-						current++
-						if (current < hashes.size) {
-							indicator.fraction = current / hashes.size
-						} else {
-							indicator.fraction = 1.0
+					try {
+						logProvider.readMetadata(root, hashes) { metadata: VcsCommitMetadata ->
+							result.add(metadata)
+							current++
+							if (current < hashes.size) {
+								indicator.fraction = current / hashes.size
+							} else {
+								indicator.fraction = 1.0
+							}
 						}
+					} catch (e: VcsException) {
+						/* If a user has Git submodules or just Git repositories lying around inside the project's
+						 * directory, then not every `logProvider` will be able to find the hashes.  Unfortunately,
+						 * there is no way to find the correct `logProvider` from the plugin. */
+						logger<CopyCommitReferenceAction>().warn("Couldn't load hashes $hashes from $logProvider", e)
 					}
 				}
 				consumer(result)
