@@ -123,10 +123,15 @@ tasks {
 	publishPlugin {
 		dependsOn("patchChangelog")
 		token = environment("PUBLISH_TOKEN")
-		// The pluginVersion is based on the SemVer (https://semver.org) and supports pre-release labels, like 2.1.7-alpha.3
+		// The pluginVersion is based on the SemVer (https://semver.org) and supports pre-release labels.
+		// Examples:
+		//   - 0.1.0-alpha.3 -> alpha
+		//   - 0.5.0-beta.3 -> beta
+		//   - 1.0.0 -> default
 		// Specify pre-release label to publish the plugin in a custom Release Channel automatically. Read more:
 		// https://plugins.jetbrains.com/docs/intellij/deployment.html#specifying-a-release-channel
-		channels =
-				properties("pluginVersion").map { listOf(it.split('-').getOrElse(1) { "default" }.split('.').first()) }
+		channels = properties("pluginVersion").map {
+			listOf(it.split('-').getOrElse(1) { "default" }.split('.').first())
+		}
 	}
 }
