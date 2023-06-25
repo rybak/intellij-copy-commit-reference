@@ -12,8 +12,27 @@
                 class="dev.andrybak.intellijcopycommitreference.CopyCommitReferenceAction"
                 icon="AllIcons.Actions.Copy"
         >
+            <!-- https://github.com/JetBrains/intellij-community/blob/master/platform/vcs-log/impl/src/META-INF/vcs-log.xml#L174-L184 -->
             <add-to-group
                     group-id="Vcs.Log.ContextMenu"
+                    anchor="after"
+                    relative-to-action="Vcs.CopyRevisionNumberAction"
+            />
+            <!-- https://github.com/JetBrains/intellij-community/blob/master/platform/vcs-log/impl/src/META-INF/vcs-log.xml#L219-L231 -->
+            <add-to-group
+                    group-id="Vcs.FileHistory.ContextMenu"
+                    anchor="after"
+                    relative-to-action="Vcs.CopyRevisionNumberAction"
+            />
+            <!-- https://github.com/JetBrains/intellij-community/blob/master/platform/vcs-impl/resources/META-INF/VcsActions.xml#L471-L476 -->
+            <add-to-group
+                    group-id="VcsSelectionHistoryDialog.Popup"
+                    anchor="after"
+                    relative-to-action="Vcs.CopyRevisionNumberAction"
+            />
+            <!-- https://github.com/JetBrains/intellij-community/blob/master/platform/vcs-impl/resources/META-INF/VcsActions.xml#L507-L579 -->
+            <add-to-group
+                    group-id="Log.FileHistory.KeymapGroup"
                     anchor="after"
                     relative-to-action="Vcs.CopyRevisionNumberAction"
             />
