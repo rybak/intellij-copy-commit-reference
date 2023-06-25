@@ -11,8 +11,7 @@
 
     <depends>com.intellij.modules.platform</depends>
 
-    <!-- TODO maybe better to rename to avoid confusion -->
-    <actions resource-bundle="messages.ActionsBundle">
+    <actions resource-bundle="messages.CopyCommitReferenceBundle">
         <action
                 id="devAndrybakCopyCommitReferenceAction"
                 class="dev.andrybak.intellij.copy_commit_reference.CopyCommitReferenceAction"
