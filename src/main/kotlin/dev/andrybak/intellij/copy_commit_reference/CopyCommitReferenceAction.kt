@@ -85,6 +85,7 @@ class CopyCommitReferenceAction : DumbAwareAction() {
 					}
 				}
 				consumer.invoke(result)
+				indicator.fraction = 1.0
 			}
 
 			override fun onThrowable(error: Throwable) {
