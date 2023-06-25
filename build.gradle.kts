@@ -74,7 +74,9 @@ tasks {
 	patchPluginXml {
 		version = properties("pluginVersion")
 		sinceBuild = properties("pluginSinceBuild")
-		untilBuild = properties("pluginUntilBuild")
+		// attribute `until-build` is optional
+		// https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html#idea-plugin__idea-version
+		// untilBuild = properties("pluginUntilBuild")
 
 		// Extract the <!-- Plugin description --> section from README.md and provide for the plugin's manifest
 		pluginDescription = providers.fileContents(layout.projectDirectory.file("README.md")).asText.map {
