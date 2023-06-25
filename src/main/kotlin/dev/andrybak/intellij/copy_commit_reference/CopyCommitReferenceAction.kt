@@ -8,8 +8,6 @@ import com.intellij.openapi.progress.ProgressIndicator
 import com.intellij.openapi.progress.Task
 import com.intellij.openapi.project.DumbAwareAction
 import com.intellij.openapi.project.Project
-import com.intellij.openapi.vcs.AbstractVcs
-import com.intellij.openapi.vcs.ProjectLevelVcsManager
 import com.intellij.openapi.vcs.VcsDataKeys
 import com.intellij.openapi.vcs.history.VcsRevisionNumber
 import com.intellij.vcs.log.VcsCommitMetadata
@@ -35,14 +33,14 @@ class CopyCommitReferenceAction : DumbAwareAction() {
 		}
 	}
 
+	/**
+	 * Determines if this action should be enabled in the GUI or not.
+	 * Enforces that [AnActionEvent.getProject] is not `null`.
+	 * Checks presence of commits in the selection similarly to how method
+	 * [com.intellij.openapi.vcs.history.actions.CopyRevisionNumberAction.update] does it.
+	 */
 	override fun update(e: AnActionEvent) {
 		if (e.project == null) {
-			e.presentation.isEnabled = false
-			return
-		}
-		val vcsManager: ProjectLevelVcsManager = ProjectLevelVcsManager.getInstance(e.project!!)
-		val singleVCS: AbstractVcs? = vcsManager.singleVCS
-		if (singleVCS == null) {
 			e.presentation.isEnabled = false
 			return
 		}
@@ -50,6 +48,10 @@ class CopyCommitReferenceAction : DumbAwareAction() {
 		e.presentation.isEnabled = revisionNumbers.isNotEmpty()
 	}
 
+	/**
+	 * Same as [com.intellij.openapi.vcs.history.actions.CopyRevisionNumberAction.getActionUpdateThread],
+	 * it is OK to call [update] in the background thread.
+	 */
 	override fun getActionUpdateThread(): ActionUpdateThread {
 		return ActionUpdateThread.BGT
 	}
