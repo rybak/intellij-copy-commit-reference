@@ -36,6 +36,7 @@ intellij {
 	pluginName = properties("pluginName")
 	version = properties("platformVersion")
 	type = properties("platformType")
+	updateSinceUntilBuild = false
 }
 
 // Configure Gradle Changelog Plugin - read more: https://github.com/JetBrains/gradle-changelog-plugin
@@ -72,6 +73,7 @@ tasks {
 		sinceBuild = properties("pluginSinceBuild")
 		// attribute `until-build` is optional
 		// https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html#idea-plugin__idea-version
+		// Note: default value of `untilBuild` is disabled in `intellij {}` block
 		// untilBuild = properties("pluginUntilBuild")
 
 		// Extract the <!-- Plugin description --> section from README.md and provide for the plugin's manifest
