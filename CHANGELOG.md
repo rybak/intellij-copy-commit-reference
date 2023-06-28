@@ -4,6 +4,10 @@
 
 ## [Unreleased]
 
+### Added
+- Installation instructions for alpha versions have been added to the
+  [README](https://github.com/rybak/intellij-copy-commit-reference/blob/main/README.md)
+
 ## [0.2.0-alpha]
 
 ### Changed

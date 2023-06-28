@@ -14,15 +14,16 @@ See [LICENSE.txt](LICENSE.txt) for details.
 
 ## Installation
 
-- Using IDE built-in plugin system:
+Using IDE built-in plugin system (right now – only through alpha release channel):
+1. Add alpha channel as a [Custom plugin repository][CustomPluginRepository].
+   - Use `https://plugins.jetbrains.com/plugins/alpha/list` as the repository URL.
+2. <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>Marketplace</kbd> > <kbd>Search for "Copy Commit Reference"</kbd> >
+   <kbd>Install Plugin</kbd>
   
-  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>Marketplace</kbd> > <kbd>Search for "Copy Commit Reference"</kbd> >
-  <kbd>Install Plugin</kbd>
-  
-- Manually:
+Manually:
 
-  Download the [latest release](https://github.com/rybak/intellij-copy-commit-reference/releases/latest) and install it manually using
-  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>⚙️</kbd> > <kbd>Install plugin from disk...</kbd>
+Download the [latest release](https://github.com/rybak/intellij-copy-commit-reference/releases/latest) and install it manually using
+<kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>⚙️</kbd> > <kbd>Install plugin from disk...</kbd>
 
 ## Plugin TODO list
 - [ ] add action to the context menu of annotations, after action of class
@@ -34,5 +35,6 @@ See [LICENSE.txt](LICENSE.txt) for details.
 ---
 Plugin based on the [IntelliJ Platform Plugin Template][template].
 
+[CustomPluginRepository]: https://www.jetbrains.com/help/idea/managing-plugins.html#repos
 [template]: https://github.com/JetBrains/intellij-platform-plugin-template
 [AnnotateToggleAction]: https://github.com/JetBrains/intellij-community/blob/master/platform/vcs-impl/src/com/intellij/openapi/vcs/actions/AnnotateToggleAction.java#L199-L202
