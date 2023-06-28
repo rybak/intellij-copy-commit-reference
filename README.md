@@ -1,8 +1,10 @@
-# Copy Commit Reference plugin
+# Copy Commit Reference
 
 ![Build](https://github.com/rybak/intellij-copy-commit-reference/workflows/Build/badge.svg)
 [![Version](https://img.shields.io/jetbrains/plugin/v/22138-copy-commit-reference.svg)](https://plugins.jetbrains.com/plugin/22138-copy-commit-reference)
 [![Downloads](https://img.shields.io/jetbrains/plugin/d/22138-copy-commit-reference.svg)](https://plugins.jetbrains.com/plugin/22138-copy-commit-reference)
+
+Plugin for IntelliJ-based IDEs.
 
 <!-- Plugin description -->
 Provides a context menu item "Copy Commit Reference" in all VCS log views. It copies a reference to the commit in
