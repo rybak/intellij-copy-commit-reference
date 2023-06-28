@@ -22,13 +22,16 @@ See [LICENSE.txt](LICENSE.txt) for details.
 
 ## Installation
 
-Using IDE built-in plugin system (right now – only through alpha release channel):
+### Using IDE built-in plugin system
+
+Right now – only through alpha release channel:
+
 1. Add alpha channel as a [Custom plugin repository][CustomPluginRepository].
    - Use `https://plugins.jetbrains.com/plugins/alpha/list` as the repository URL.
 2. <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>Marketplace</kbd> > <kbd>Search for "Copy Commit Reference"</kbd> >
    <kbd>Install Plugin</kbd>
   
-Manually:
+### Manually
 
 Download the [latest release](https://github.com/rybak/intellij-copy-commit-reference/releases/latest) and install it manually using
 <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>⚙️</kbd> > <kbd>Install plugin from disk...</kbd>
