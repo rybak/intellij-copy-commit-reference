@@ -7,6 +7,7 @@
 ### Added
 - Installation instructions for alpha versions have been added to the
   [README](https://github.com/rybak/intellij-copy-commit-reference/blob/main/README.md)
+- Example of a commit reference has been added to plugin's public description
 
 ## [0.2.0-alpha]
 

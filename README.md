@@ -9,6 +9,10 @@ Plugin for IntelliJ-based IDEs.
 <!-- Plugin description -->
 Provides a context menu item "Copy Commit Reference" in all VCS log views. It copies a reference to the commit in
 the [same format as `git log --format=reference`](https://git-scm.com/docs/git-log#_pretty_formats).
+
+This format is used to refer to another commit in a commit message.  For example:
+[commit `1f0fc1d (pretty: implement 'reference' format, 2019-11-20)`](https://github.com/git/git/commit/1f0fc1db8599f87520494ca4f0e3c1b6fabdf997)
+in the git.git repository.
 <!-- Plugin description end -->
 
 Source code of the plugin is distributed under the terms of the MIT Licence.
