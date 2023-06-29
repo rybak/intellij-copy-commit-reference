@@ -60,6 +60,13 @@ class CopyCommitReferenceAction : DumbAwareAction() {
 		return ActionUpdateThread.BGT
 	}
 
+	/**
+	 * Extracts metadata of selected commits (if any are selected) from
+	 * [context][com.intellij.openapi.actionSystem.AnActionEvent.getDataContext] of the given [event].
+	 * Invokes given [consumer] with the extracted metadata.
+	 *
+	 * See also [com.intellij.vcs.log.ui.VcsLogPanel.getData].
+	 */
 	private fun getCommitMetadataFromContext(event: AnActionEvent, consumer: (List<VcsCommitMetadata>) -> Unit) {
 		// VcsDataKeys.VCS_REVISION_NUMBERS in the context of the `event` is populated by IDEA's own UI.
 		val revisionNumbers: List<VcsRevisionNumber> = unwrapNull(event.getData(VcsDataKeys.VCS_REVISION_NUMBERS))
