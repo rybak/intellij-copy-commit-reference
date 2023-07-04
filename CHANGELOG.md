@@ -9,7 +9,7 @@
   [README](https://github.com/rybak/intellij-copy-commit-reference/blob/main/README.md)
 - Example of a commit reference has been added to plugin's public description
 
-## [0.2.0-alpha]
+## [0.2.0-alpha] - 2023-06-29
 
 ### Changed
 - Plugin's compatibility has been expanded
