@@ -95,7 +95,7 @@ tasks {
 			with(changelog) {
 				renderItem(
 						(getOrNull(pluginVersion) ?: getUnreleased())
-								.withHeader(false)
+								.withHeader(true)
 								.withEmptySections(false),
 						Changelog.OutputType.HTML,
 				)
