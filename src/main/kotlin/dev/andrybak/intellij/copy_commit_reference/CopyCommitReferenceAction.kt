@@ -1,7 +1,7 @@
 package dev.andrybak.intellij.copy_commit_reference
 
-import com.intellij.openapi.actionSystem.ActionUpdateThread
 import com.intellij.openapi.actionSystem.AnActionEvent
+import com.intellij.openapi.actionSystem.UpdateInBackground
 import com.intellij.openapi.diagnostic.logger
 import com.intellij.openapi.ide.CopyPasteManager
 import com.intellij.openapi.progress.ProgressIndicator
@@ -26,7 +26,7 @@ import java.time.format.DateTimeFormatter
  * information: the reference format includes an abbreviated hash of the commit, subject line of the commit (first line
  * of the commit message), and the date in ISO 8601 format.
  */
-class CopyCommitReferenceAction : DumbAwareAction() {
+class CopyCommitReferenceAction : DumbAwareAction(), UpdateInBackground {
 	override fun actionPerformed(e: AnActionEvent) {
 		getCommitMetadataFromContext(e) { listOfMetadata: List<VcsCommitMetadata> ->
 			/* Unlike CopyCommitReferenceAction, preserve the order in which the commits appear in the GUI:
@@ -50,14 +50,6 @@ class CopyCommitReferenceAction : DumbAwareAction() {
 		}
 		val revisionNumbers: List<VcsRevisionNumber> = unwrapNull(e.getData(VcsDataKeys.VCS_REVISION_NUMBERS))
 		e.presentation.isEnabled = revisionNumbers.isNotEmpty()
-	}
-
-	/**
-	 * Same as [com.intellij.openapi.vcs.history.actions.CopyRevisionNumberAction.getActionUpdateThread],
-	 * it is OK to call [update] in the background thread.
-	 */
-	override fun getActionUpdateThread(): ActionUpdateThread {
-		return ActionUpdateThread.BGT
 	}
 
 	/**
