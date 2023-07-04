@@ -97,7 +97,7 @@ tasks {
 						(getOrNull(pluginVersion) ?: getUnreleased())
 								.withHeader(true)
 								.withEmptySections(false),
-						Changelog.OutputType.HTML,
+						Changelog.OutputType.HTML
 				)
 			}
 		}
