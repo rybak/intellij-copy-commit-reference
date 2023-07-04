@@ -93,10 +93,14 @@ tasks {
 		// Get the latest available change notes from the changelog file
 		changeNotes = properties("pluginVersion").map { pluginVersion ->
 			with(changelog) {
+				val extraItems = mapOf(
+						"See also" to setOf("* [Full changelog](https://github.com/rybak/intellij-copy-commit-reference/blob/main/CHANGELOG.md)")
+				)
 				renderItem(
 						(getOrNull(pluginVersion) ?: getUnreleased())
 								.withHeader(true)
-								.withEmptySections(false),
+								.withEmptySections(false)
+								.plus(Changelog.Item("", "", "", false, extraItems, "* ", "")),
 						Changelog.OutputType.HTML
 				)
 			}
