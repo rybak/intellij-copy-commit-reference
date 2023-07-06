@@ -45,6 +45,11 @@ jobs:
       - name: Fetch Sources
         uses: actions/checkout@v3
 
+      - name: Disable Gradle Welcome
+        run: |
+          mkdir ~/.gradle
+          echo "org.gradle.welcome=never" >>~/.gradle/gradle.properties
+
       # Validate wrapper
       - name: Gradle Wrapper Validation
         uses: gradle/wrapper-validation-action@v1.0.6
