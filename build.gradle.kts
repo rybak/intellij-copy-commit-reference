@@ -99,7 +99,7 @@ tasks {
 				)
 				renderItem(
 						(getOrNull(pluginVersion) ?: getUnreleased())
-								.withHeader(true)
+								.withHeader(false)
 								.withEmptySections(false)
 								.plus(Changelog.Item("", "", "", false, extraItems, "* ", "")),
 						Changelog.OutputType.HTML
