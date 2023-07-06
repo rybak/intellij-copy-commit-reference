@@ -162,7 +162,7 @@ jobs:
         run: |
           gh release create v${{ needs.build.outputs.version }} \
             --draft \
-            --title "v${{ needs.build.outputs.version }}" \
+            --title "Copy Commit Reference ${{ needs.build.outputs.version }}" \
             --notes "$(cat << 'EOM'
           ${{ needs.build.outputs.changelog }}
           EOM
