@@ -36,7 +36,7 @@ Right now – only through alpha release channel:
   
 ### Manually
 
-Download the [latest release](https://github.com/rybak/intellij-copy-commit-reference/releases/latest) and install it manually using
+Download the [latest release](https://plugins.jetbrains.com/plugin/22138-copy-commit-reference/versions) and install it manually using
 <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>⚙️</kbd> > <kbd>Install plugin from disk...</kbd>
 
 ## Plugin TODO list
