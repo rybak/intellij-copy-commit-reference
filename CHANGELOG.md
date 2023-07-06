@@ -11,6 +11,7 @@
 ### Changed
 - Example of a commit reference has been added to plugin's public description
 - Plugin's compatibility has been expanded to include version 2020.3 and later versions
+- Layout of the changelog in the "What's New" tab for the plugin has been improved.
 
 ## [0.2.0-alpha] - 2023-06-29
 

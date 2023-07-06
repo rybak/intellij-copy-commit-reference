@@ -93,7 +93,7 @@ tasks {
 		val changelog = project.changelog // local variable for configuration cache compatibility
 		// Get the latest available change notes from the changelog file
 		changeNotes = properties("pluginVersion").map { pluginVersion ->
-			with(changelog) {
+			"<h2>${pluginVersion}</h2>\n" + with(changelog) {
 				val extraItems = mapOf(
 						"See also" to setOf("* [Full changelog](https://github.com/rybak/intellij-copy-commit-reference/blob/main/CHANGELOG.md)")
 				)
