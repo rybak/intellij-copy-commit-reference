@@ -4,6 +4,8 @@
 
 ## [Unreleased]
 
+## [0.3.0-alpha] - 2023-07-07
+
 ### Added
 - Installation instructions for alpha versions have been added to the
   [README](https://github.com/rybak/intellij-copy-commit-reference/blob/main/README.md)
@@ -31,6 +33,7 @@
   - Popup dialog "History for Selection"
 - Support for "Copy Commit Reference" action as a shortcut in the keymap
 
-[Unreleased]: https://github.com/rybak/intellij-copy-commit-reference/compare/v0.2.0-alpha...HEAD
+[Unreleased]: https://github.com/rybak/intellij-copy-commit-reference/compare/v0.3.0-alpha...HEAD
+[0.3.0-alpha]: https://github.com/rybak/intellij-copy-commit-reference/compare/v0.2.0-alpha...v0.3.0-alpha
 [0.2.0-alpha]: https://github.com/rybak/intellij-copy-commit-reference/compare/v0.1.0-alpha.1...v0.2.0-alpha
 [0.1.0-alpha.1]: https://github.com/rybak/intellij-copy-commit-reference/commits/v0.1.0-alpha.1
