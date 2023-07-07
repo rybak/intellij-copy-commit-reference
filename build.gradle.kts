@@ -95,13 +95,13 @@ tasks {
 		changeNotes = properties("pluginVersion").map { pluginVersion ->
 			"<h2>${pluginVersion}</h2>\n" + with(changelog) {
 				val extraItems = mapOf(
-						"See also" to setOf("* [Full changelog](https://github.com/rybak/intellij-copy-commit-reference/blob/main/CHANGELOG.md)")
+						"See also" to setOf("[Full changelog](https://github.com/rybak/intellij-copy-commit-reference/blob/main/CHANGELOG.md)")
 				)
 				renderItem(
 						(getOrNull(pluginVersion) ?: getUnreleased())
 								.withHeader(false)
 								.withEmptySections(false)
-								.plus(Changelog.Item("", "", "", false, extraItems, "* ", "")),
+								.plus(Changelog.Item("", "", "", false, extraItems, "", "")),
 						Changelog.OutputType.HTML
 				)
 			}
