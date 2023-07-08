@@ -139,4 +139,13 @@ tasks {
 			listOf(it.split('-').getOrElse(1) { "default" }.split('.').first())
 		}
 	}
+
+	listOf(jar, kotlinSourcesJar).forEach { jarTaskProvider ->
+		jarTaskProvider.configure {
+			from(rootDir) {
+				include("LICENSE.txt")
+				into("META-INF")
+			}
+		}
+	}
 }
