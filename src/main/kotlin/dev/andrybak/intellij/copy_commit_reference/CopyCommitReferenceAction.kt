@@ -74,6 +74,7 @@ class CopyCommitReferenceAction : DumbAwareAction(), UpdateInBackground {
 
 		val task = object : Task.Backgroundable(project, actionName, true) {
 			override fun run(indicator: ProgressIndicator) {
+				indicator.isIndeterminate = false
 				val logProviders = VcsProjectLog.getLogProviders(project)
 				val result: MutableMap<Hash, VcsCommitMetadata> = mutableMapOf()
 				var current = 0.0
