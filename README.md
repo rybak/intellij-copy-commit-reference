@@ -36,7 +36,8 @@ Right now – only through alpha release channel:
   
 ### Manually
 
-Download the [latest release](https://plugins.jetbrains.com/plugin/22138-copy-commit-reference/versions) and install it manually using
+Download the latest release from [GitHub][GitHubLatestRelease] or [JetBrains Marketplace][Marketplace]
+and install it manually using
 <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>⚙️</kbd> > <kbd>Install plugin from disk...</kbd>
 
 ## Plugin TODO list
@@ -52,3 +53,5 @@ Plugin based on the [IntelliJ Platform Plugin Template][template].
 [CustomPluginRepository]: https://www.jetbrains.com/help/idea/managing-plugins.html#repos
 [template]: https://github.com/JetBrains/intellij-platform-plugin-template
 [AnnotateToggleAction]: https://github.com/JetBrains/intellij-community/blob/master/platform/vcs-impl/src/com/intellij/openapi/vcs/actions/AnnotateToggleAction.java#L199-L202
+[GitHubLatestRelease]: https://github.com/rybak/intellij-copy-commit-reference/releases/latest
+[Marketplace]: https://plugins.jetbrains.com/plugin/22138-copy-commit-reference/versions
