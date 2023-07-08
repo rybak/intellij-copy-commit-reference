@@ -4,6 +4,11 @@
 
 ## [Unreleased]
 
+### Added
+- If commit's subject line contains mentions of issues, which are configured for
+  [navigation in the project](https://www.jetbrains.com/help/idea/settings-version-control-issue-navigation.html),
+  then the reference pasted into a rich text editor will include clickable links.
+
 ## [0.3.0-alpha] - 2023-07-07
 
 ### Added

@@ -10,11 +10,12 @@ import com.intellij.openapi.project.DumbAwareAction
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.vcs.VcsDataKeys
 import com.intellij.openapi.vcs.VcsException
+import com.intellij.openapi.vcs.changes.issueLinks.IssueLinkHtmlRenderer
 import com.intellij.openapi.vcs.history.VcsRevisionNumber
+import com.intellij.util.ui.TextTransferable
 import com.intellij.vcs.log.Hash
 import com.intellij.vcs.log.VcsCommitMetadata
 import com.intellij.vcs.log.impl.VcsProjectLog
-import java.awt.datatransfer.StringSelection
 import java.time.Instant
 import java.time.ZoneId
 import java.time.format.DateTimeFormatter
@@ -33,7 +34,9 @@ class CopyCommitReferenceAction : DumbAwareAction(), UpdateInBackground {
 			 * newest commits are at the top.  References are rarely copied en masse, but even when they
 			 * are, it will be easier for user to navigate the result in the same order as in the GUI. */
 			val references: List<String> = listOfMetadata.map(::commitReference)
-			CopyPasteManager.getInstance().setContents(StringSelection(references.joinToString("\n")))
+			val plainTextResult = references.joinToString("\n")
+			val htmlResult = formatTextWithLinks(e, plainTextResult)
+			CopyPasteManager.getInstance().setContents(TextTransferable(htmlResult, plainTextResult))
 		}
 	}
 
@@ -121,5 +124,11 @@ class CopyCommitReferenceAction : DumbAwareAction(), UpdateInBackground {
 		// TODO figure out how to do proper abbreviation
 		val abbrevHash = hash.subSequence(0, 7)
 		return "$abbrevHash ($subject, $formattedDate)"
+	}
+
+	private fun formatTextWithLinks(event: AnActionEvent, plainTextResult: String): String {
+		// non-nullity is enforced by method `update()`
+		val project: Project = event.project!!
+		return IssueLinkHtmlRenderer.formatTextWithLinks(project, plainTextResult)
 	}
 }
