@@ -13,20 +13,20 @@
 
 ### Added
 - Installation instructions for alpha versions have been added to the
-  [README](https://github.com/rybak/intellij-copy-commit-reference/blob/main/README.md)
-- "What's New" tab for the plugin now includes a link to the full changelog
+  [README](https://github.com/rybak/intellij-copy-commit-reference/blob/main/README.md).
+- "What's New" tab for the plugin now includes a link to the full changelog.
 
 ### Changed
-- Example of a commit reference has been added to plugin's public description
-- Plugin's compatibility has been expanded to include version 2020.3 and later versions
+- Example of a commit reference has been added to plugin's public description.
+- Plugin's compatibility has been expanded to include version 2020.3 and later versions.
 - Layout of the changelog in the "What's New" tab for the plugin has been improved.
 
 ## [0.2.0-alpha] - 2023-06-29
 
 ### Changed
-- Plugin's compatibility has been expanded
-- Plugin's artifacts are now [signed](https://plugins.jetbrains.com/docs/intellij/plugin-signing.html)
-- Versioning scheme for the alpha releases has been simplified
+- Plugin's compatibility has been expanded.
+- Plugin's artifacts are now [signed](https://plugins.jetbrains.com/docs/intellij/plugin-signing.html).
+- Versioning scheme for the alpha releases has been simplified.
 
 ## [0.1.0-alpha.1] - 2023-06-25
 
