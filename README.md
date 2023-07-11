@@ -24,15 +24,19 @@ See [LICENSE.txt](LICENSE.txt) for details.
 
 ### Using IDE built-in plugin system
 
-Right now – only through alpha release channel:
+#### Stable version
+
+<kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>Marketplace</kbd> > <kbd>Search for "Copy Commit Reference"</kbd> >
+<kbd>Install Plugin</kbd>
+
+#### Alpha version
 
 1. Add alpha channel as a [Custom plugin repository][CustomPluginRepository].
    - Use `https://plugins.jetbrains.com/plugins/list?channel=alpha&pluginId=dev.andrybak.intellij.copy_commit_reference`
      as the repository URL.
    - You can also use `https://plugins.jetbrains.com/plugins/alpha/list` if you
      would like to get _all_ plugins available in the `alpha` channel.
-2. <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>Marketplace</kbd> > <kbd>Search for "Copy Commit Reference"</kbd> >
-   <kbd>Install Plugin</kbd>
+2. Install the plugin through the Marketplace search as usual.
   
 ### Manually
 
