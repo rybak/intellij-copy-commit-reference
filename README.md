@@ -1,8 +1,8 @@
 # Copy Commit Reference
 
-![Build](https://github.com/rybak/intellij-copy-commit-reference/workflows/Build/badge.svg)
-[![Version](https://img.shields.io/jetbrains/plugin/v/22138-copy-commit-reference.svg)](https://plugins.jetbrains.com/plugin/22138-copy-commit-reference)
-[![Downloads](https://img.shields.io/jetbrains/plugin/d/22138-copy-commit-reference.svg)](https://plugins.jetbrains.com/plugin/22138-copy-commit-reference)
+[![Build](https://github.com/rybak/intellij-copy-commit-reference/workflows/Build/badge.svg)][GitHubActions]
+[![Version](https://img.shields.io/jetbrains/plugin/v/22138-copy-commit-reference.svg)][Marketplace]
+[![Downloads](https://img.shields.io/jetbrains/plugin/d/22138-copy-commit-reference.svg)][Marketplace]
 
 Plugin for IntelliJ-based IDEs.
 
@@ -40,7 +40,7 @@ See [LICENSE.txt](LICENSE.txt) for details.
   
 ### Manually
 
-Download the latest release from [GitHub][GitHubLatestRelease] or [JetBrains Marketplace][Marketplace]
+Download the latest release from [GitHub][GitHubLatestRelease] or [JetBrains Marketplace][MarketplaceVersions]
 and install it manually using
 <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>⚙️</kbd> > <kbd>Install plugin from disk...</kbd>
 
@@ -57,5 +57,7 @@ Plugin based on the [IntelliJ Platform Plugin Template][template].
 [CustomPluginRepository]: https://www.jetbrains.com/help/idea/managing-plugins.html#repos
 [template]: https://github.com/JetBrains/intellij-platform-plugin-template
 [AnnotateToggleAction]: https://github.com/JetBrains/intellij-community/blob/master/platform/vcs-impl/src/com/intellij/openapi/vcs/actions/AnnotateToggleAction.java#L199-L202
+[GitHubActions]: https://github.com/rybak/intellij-copy-commit-reference/actions
 [GitHubLatestRelease]: https://github.com/rybak/intellij-copy-commit-reference/releases/latest
-[Marketplace]: https://plugins.jetbrains.com/plugin/22138-copy-commit-reference/versions
+[Marketplace]: https://plugins.jetbrains.com/plugin/22138-copy-commit-reference
+[MarketplaceVersions]: https://plugins.jetbrains.com/plugin/22138-copy-commit-reference/versions
