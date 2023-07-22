@@ -15,7 +15,7 @@ This format is used to refer to another commit in a commit message.  For example
 in the git.git repository.
 <!-- Plugin description end -->
 
-![Screenshot of changed context menu in tab "Log"](images/tab-log.png "How the menu looks like in tab 'Log'")
+![Demonstration of the plugin](images/intellij-copy-commit-reference-demo.gif "How the plugin can be used")
 
 Source code of the plugin is distributed under the terms of the MIT Licence.
 See [LICENSE.txt](LICENSE.txt) for details.
