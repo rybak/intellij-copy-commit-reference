@@ -27,7 +27,7 @@ See [LICENSE.txt](LICENSE.txt) for details.
 #### Stable version
 
 <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>Marketplace</kbd> > <kbd>Search for "Copy Commit Reference"</kbd> >
-<kbd>Install Plugin</kbd>
+<kbd>Install</kbd>
 
 #### Alpha version
 
