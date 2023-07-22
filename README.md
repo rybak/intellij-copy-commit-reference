@@ -44,6 +44,19 @@ Download the latest release from [GitHub][GitHubLatestRelease] or [JetBrains Mar
 and install it manually using
 <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>⚙️</kbd> > <kbd>Install plugin from disk...</kbd>
 
+## Building from source
+
+1. Run Gradle task `buildPlugin`:
+   ```
+   ./gradlew buildPlugin
+   ```
+2. The plugin bundle will be available in directory `build/distributions/`.
+
+## Debugging from IntelliJ IDEA
+
+1. Open the project in IntelliJ IDEA
+2. Launch run configuration "Run IDE for UI Tests"
+
 ## Plugin TODO list
 - [ ] add action to the context menu of annotations, after action of class
       `CopyRevisionNumberFromAnnotateAction`
