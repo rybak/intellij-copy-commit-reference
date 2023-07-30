@@ -3,22 +3,16 @@ package dev.andrybak.intellij.copy_commit_reference
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.actionSystem.UpdateInBackground
 import com.intellij.openapi.diagnostic.logger
-import com.intellij.openapi.ide.CopyPasteManager
 import com.intellij.openapi.progress.ProgressIndicator
 import com.intellij.openapi.progress.Task
 import com.intellij.openapi.project.DumbAwareAction
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.vcs.VcsDataKeys
 import com.intellij.openapi.vcs.VcsException
-import com.intellij.openapi.vcs.changes.issueLinks.IssueLinkHtmlRenderer
 import com.intellij.openapi.vcs.history.VcsRevisionNumber
-import com.intellij.util.ui.TextTransferable
 import com.intellij.vcs.log.Hash
 import com.intellij.vcs.log.VcsCommitMetadata
 import com.intellij.vcs.log.impl.VcsProjectLog
-import java.time.Instant
-import java.time.ZoneId
-import java.time.format.DateTimeFormatter
 
 /**
  * This context menu action provides easy access to the "reference" pretty format of Git.
@@ -30,13 +24,9 @@ import java.time.format.DateTimeFormatter
 class CopyCommitReferenceAction : DumbAwareAction(), UpdateInBackground {
 	override fun actionPerformed(e: AnActionEvent) {
 		getCommitMetadataFromContext(e) { listOfMetadata: List<VcsCommitMetadata> ->
-			/* Unlike CopyCommitReferenceAction, preserve the order in which the commits appear in the GUI:
-			 * newest commits are at the top.  References are rarely copied en masse, but even when they
-			 * are, it will be easier for user to navigate the result in the same order as in the GUI. */
-			val references: List<String> = listOfMetadata.map(::commitReference)
-			val plainTextResult = references.joinToString("\n")
-			val htmlResult = formatTextWithLinks(e, plainTextResult)
-			CopyPasteManager.getInstance().setContents(TextTransferable(htmlResult, plainTextResult))
+			// non-nullity is enforced by method `update()`
+			val project: Project = e.project!!
+			copyCommitReference(project, listOfMetadata)
 		}
 	}
 
@@ -112,24 +102,5 @@ class CopyCommitReferenceAction : DumbAwareAction(), UpdateInBackground {
 
 	private fun unwrapNull(data: Array<VcsRevisionNumber>?): List<VcsRevisionNumber> {
 		return if (data != null) listOf(*data) else emptyList()
-	}
-
-	private fun commitReference(metadata: VcsCommitMetadata): String {
-		return commitReference(metadata.id.asString(), metadata.subject, Instant.ofEpochMilli(metadata.timestamp))
-	}
-
-	private fun commitReference(hash: String, subject: String, timestamp: Instant): String {
-		/* Class VcsCommitMetadata doesn't provide time zone of the commit (Git does store it),
-		 * so showing in the local timezone is the only option. */
-		val formattedDate: String = DateTimeFormatter.ISO_LOCAL_DATE.format(timestamp.atZone(ZoneId.systemDefault()))
-		// TODO figure out how to do proper abbreviation
-		val abbrevHash = hash.subSequence(0, 7)
-		return "$abbrevHash ($subject, $formattedDate)"
-	}
-
-	private fun formatTextWithLinks(event: AnActionEvent, plainTextResult: String): String {
-		// non-nullity is enforced by method `update()`
-		val project: Project = event.project!!
-		return IssueLinkHtmlRenderer.formatTextWithLinks(project, plainTextResult)
 	}
 }
