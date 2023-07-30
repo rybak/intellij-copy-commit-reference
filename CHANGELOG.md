@@ -4,6 +4,8 @@
 
 ## [Unreleased]
 
+## [1.1.0] - 2023-07-30
+
 ### Added
 - Added "Copy Commit Reference" action to the context menu of VCS annotations.
 
@@ -45,7 +47,8 @@
   - Popup dialog "History for Selection"
 - Support for "Copy Commit Reference" action as a shortcut in the keymap
 
-[Unreleased]: https://github.com/rybak/intellij-copy-commit-reference/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/rybak/intellij-copy-commit-reference/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/rybak/intellij-copy-commit-reference/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/rybak/intellij-copy-commit-reference/compare/v0.3.0-alpha...v1.0.0
 [0.3.0-alpha]: https://github.com/rybak/intellij-copy-commit-reference/compare/v0.2.0-alpha...v0.3.0-alpha
 [0.2.0-alpha]: https://github.com/rybak/intellij-copy-commit-reference/compare/v0.1.0-alpha.1...v0.2.0-alpha
