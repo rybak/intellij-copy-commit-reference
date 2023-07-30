@@ -51,7 +51,7 @@ class CopyCommitReferenceAction : DumbAwareAction(), UpdateInBackground {
 		val revisionNumbers: List<VcsRevisionNumber> = unwrapNull(event.getData(VcsDataKeys.VCS_REVISION_NUMBERS))
 		// non-nullity is enforced by method `update()`
 		val project: Project = event.project!!
-		val actionName = templateText ?: "Copy Commit Reference bundle is broken?"
+		val actionName = templateText ?: "Bundle is broken for CopyCommitReferenceAction"
 		getCommitMetadata(project, actionName, revisionNumbers, consumer)
 	}
 
