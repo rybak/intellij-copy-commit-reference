@@ -9,7 +9,8 @@ import com.intellij.openapi.vcs.history.VcsRevisionNumber
 import com.intellij.vcs.log.VcsCommitMetadata
 
 /**
- * This context menu action provides easy access to the "reference" pretty format of Git.
+ * This context menu action provides easy access to the "reference" pretty format of Git in IntelliJ UI views that
+ * contain a Git log: tab "Log" of tool window "Git", table in the "History for Selection" dialog, etc.
  * See [Git documentation of `git-log`](https://git-scm.com/docs/git-log#_pretty_formats) for details.
  * It is similar to [com.intellij.openapi.vcs.history.actions.CopyRevisionNumberAction], but with more
  * information: the reference format includes an abbreviated hash of the commit, subject line of the commit (first line

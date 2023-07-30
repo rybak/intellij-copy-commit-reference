@@ -58,11 +58,7 @@ and install it manually using
 2. Launch run configuration "Run IDE for UI Tests"
 
 ## Plugin TODO list
-- [ ] add action to the context menu of annotations, after action of class
-      `CopyRevisionNumberFromAnnotateAction`
-    - Not feasible as of IntelliJ 2023.1, because context menu of annotations
-      is custom-built.  See [usage of class `CopyRevisionNumberFromAnnotateAction` in
-      `AnnotateToggleAction.java`][AnnotateToggleAction]
+See file [TODO.md on branch `todo`][TODO]
 
 ---
 Plugin based on the [IntelliJ Platform Plugin Template][template].
@@ -74,3 +70,4 @@ Plugin based on the [IntelliJ Platform Plugin Template][template].
 [GitHubLatestRelease]: https://github.com/rybak/intellij-copy-commit-reference/releases/latest
 [Marketplace]: https://plugins.jetbrains.com/plugin/22138-copy-commit-reference
 [MarketplaceVersions]: https://plugins.jetbrains.com/plugin/22138-copy-commit-reference/versions
+[TODO]: https://github.com/rybak/intellij-copy-commit-reference/blob/todo/TODO.md

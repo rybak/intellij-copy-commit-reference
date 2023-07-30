@@ -43,4 +43,8 @@
             />
         </action>
     </actions>
+    <extensions defaultExtensionNs="com.intellij">
+        <vcsAnnotationGutterActionProvider
+                implementation="dev.andrybak.intellij.copy_commit_reference.CopyCommitReferenceGutterActionProvider"/>
+    </extensions>
 </idea-plugin>

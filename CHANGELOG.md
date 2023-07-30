@@ -4,6 +4,9 @@
 
 ## [Unreleased]
 
+### Added
+- Added "Commit Commit Reference" action to the context menu of VCS annotations.
+
 ## [1.0.0] - 2023-07-10
 
 ### Added
