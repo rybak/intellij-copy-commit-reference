@@ -1,16 +1,27 @@
 ## To Do
 
 - Bump versions of GitHub actions
-- Create branch release-v1
-    > Versions 1.* will be capped for compatibility. See git commit messages for until-build and other compatibility changes.
+- Bump dependency versions
+    > See WIP branch upgrade-dependencies
 
 ## Doing
 
+- 2.0.0
+    * [ ] Integrate changes from all branches related to 2.0.0 (two local branches atm)
+    * [ ] Test the change to BGT
+    * [ ] Copy edit the CHANGELOG
+    * [ ] Release 2.0.0
+    * [ ] Move on to create branch dev-1 for 1.*.*
 - Building instructions
+    > https://github.com/rybak/intellij-copy-commit-reference/issues/5
     * [x] double check building from source instructions
     * [x] double check debugging from IDE instructions
     * [x] push to `main`
     * [ ] write "Release process" instructions
+- Create branch dev-1
+    > Versions 1.* will be capped for compatibility. See git commit messages for until-build and other compatibility changes.
+    * [ ] Wait for 2.0.0 to get released
+    * [ ] Name variants: release-1, release-v1, dev-1
 
 ## Done
 
