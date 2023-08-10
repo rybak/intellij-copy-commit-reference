@@ -4,6 +4,8 @@
 
 ## [Unreleased]
 
+## [1.1.1] - 2023-08-10
+
 ### Fixed
 - The plugin sometimes produced references with a slightly incorrect date, which has been corrected.
 - Incorrect usage of background thread has been fixed to reduce probability of concurrency issues in context menu of annotations.
@@ -51,7 +53,8 @@
   - Popup dialog "History for Selection"
 - Support for "Copy Commit Reference" action as a shortcut in the keymap
 
-[Unreleased]: https://github.com/rybak/intellij-copy-commit-reference/compare/v1.1.0...HEAD
+[Unreleased]: https://github.com/rybak/intellij-copy-commit-reference/compare/v1.1.1...HEAD
+[1.1.1]: https://github.com/rybak/intellij-copy-commit-reference/compare/v1.1.0...v1.1.1
 [1.1.0]: https://github.com/rybak/intellij-copy-commit-reference/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/rybak/intellij-copy-commit-reference/compare/v0.3.0-alpha...v1.0.0
 [0.3.0-alpha]: https://github.com/rybak/intellij-copy-commit-reference/compare/v0.2.0-alpha...v0.3.0-alpha
