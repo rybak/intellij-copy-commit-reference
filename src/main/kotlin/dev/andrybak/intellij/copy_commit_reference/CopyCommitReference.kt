@@ -20,7 +20,7 @@ fun copyCommitReference(project: Project, listOfMetadata: List<VcsCommitMetadata
 }
 
 private fun commitReference(metadata: VcsCommitMetadata): String {
-	return commitReference(metadata.id.asString(), metadata.subject, Instant.ofEpochMilli(metadata.timestamp))
+	return commitReference(metadata.id.asString(), metadata.subject, Instant.ofEpochMilli(metadata.authorTime))
 }
 
 private fun commitReference(hash: String, subject: String, timestamp: Instant): String {
