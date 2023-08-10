@@ -4,6 +4,9 @@
 
 ## [Unreleased]
 
+### Fixed
+- Incorrect usage of background thread has been fixed to reduce probability of concurrency issues in context menu of annotations.
+
 ## [1.1.0] - 2023-07-30
 
 ### Added

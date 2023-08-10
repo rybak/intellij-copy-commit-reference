@@ -21,7 +21,7 @@ class CopyCommitReferenceAnnotationAction(private val annotation: FileAnnotation
 		CopyCommitReferenceBundle.messagePointer("action.devAndrybakCopyCommitReferenceAction.text"),
 		CopyCommitReferenceBundle.messagePointer("action.devAndrybakCopyCommitReferenceAction.description"),
 		PlatformIcons.COPY_ICON
-), UpToDateLineNumberListener, UpdateInBackground {
+), UpToDateLineNumberListener {
 
 	private var lineNumber = -1
 
