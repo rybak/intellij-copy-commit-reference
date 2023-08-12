@@ -10,10 +10,10 @@
 ## Doing
 
 - 2.0.0
-    * [ ] Rebase onto master
+    * [x] Rebase onto master
     * [x] Integrate changes from all branches related to 2.0.0 (two local branches atm)
     * [ ] Test changes
-    * [ ] Copyedit the CHANGELOG
+    * [x] Copyedit the CHANGELOG
     * [ ] Release 2.0.0
     * [ ] Move on to create branch dev-1 for 1.*.*
 - Building instructions
