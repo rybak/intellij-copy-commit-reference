@@ -7,6 +7,7 @@ import com.intellij.openapi.project.Project
 import com.intellij.openapi.vcs.VcsDataKeys
 import com.intellij.openapi.vcs.history.VcsRevisionNumber
 import com.intellij.vcs.log.VcsCommitMetadata
+import org.jetbrains.annotations.NotNull
 
 /**
  * This context menu action provides easy access to the "reference" pretty format of Git in IntelliJ UI views that
@@ -25,6 +26,7 @@ class CopyCommitReferenceAction : DumbAwareAction() {
 		}
 	}
 
+	@NotNull
 	override fun getActionUpdateThread(): ActionUpdateThread {
 		return ActionUpdateThread.BGT
 	}

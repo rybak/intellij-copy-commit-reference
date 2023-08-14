@@ -8,6 +8,7 @@ import com.intellij.openapi.vcs.annotate.AnnotationGutterActionProvider
 import com.intellij.openapi.vcs.annotate.FileAnnotation
 import com.intellij.openapi.vcs.annotate.UpToDateLineNumberListener
 import com.intellij.util.PlatformIcons
+import org.jetbrains.annotations.NotNull
 
 /**
  * This context menu action provides easy access to the "reference" pretty format of Git in IntelliJ UI annotation
@@ -40,6 +41,7 @@ class CopyCommitReferenceAnnotationAction(private val annotation: FileAnnotation
 		}
 	}
 
+	@NotNull
 	override fun getActionUpdateThread(): ActionUpdateThread {
 		return ActionUpdateThread.EDT
 	}
