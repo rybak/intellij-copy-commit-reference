@@ -6,7 +6,7 @@
 
 ### Changed
 - Compatibility with newer versions of IntelliJ has been improved.
-- Support for versions older than 2022.1 has been removed. Version 1.\*.\* of Copy Commit Reference can still be used with any versions of IntelliJ between 2020.3 and 2023.2.
+- Support for IntelliJ older than 2022.1 has been removed. Version 1.\*.\* of Copy Commit Reference can still be used with IntelliJ 2020.3 to 2023.2.
 
 ## [1.1.1] - 2023-08-10
 
