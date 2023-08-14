@@ -4,6 +4,8 @@
 
 ## [Unreleased]
 
+## [2.0.0] - 2023-08-14
+
 ### Changed
 - Compatibility with newer versions of IntelliJ has been improved.
 - Support for IntelliJ older than 2022.1 has been removed. Version 1.\*.\* of Copy Commit Reference can still be used with IntelliJ 2020.3 to 2023.2.
@@ -57,7 +59,8 @@
   - Popup dialog "History for Selection"
 - Support for "Copy Commit Reference" action as a shortcut in the keymap
 
-[Unreleased]: https://github.com/rybak/intellij-copy-commit-reference/compare/v1.1.1...HEAD
+[Unreleased]: https://github.com/rybak/intellij-copy-commit-reference/compare/v2.0.0...HEAD
+[2.0.0]: https://github.com/rybak/intellij-copy-commit-reference/compare/v1.1.1...v2.0.0
 [1.1.1]: https://github.com/rybak/intellij-copy-commit-reference/compare/v1.1.0...v1.1.1
 [1.1.0]: https://github.com/rybak/intellij-copy-commit-reference/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/rybak/intellij-copy-commit-reference/compare/v0.3.0-alpha...v1.0.0
