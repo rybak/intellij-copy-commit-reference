@@ -1,5 +1,6 @@
 package dev.andrybak.intellij.copy_commit_reference
 
+import com.intellij.openapi.actionSystem.ActionUpdateThread
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.project.DumbAwareAction
@@ -37,6 +38,10 @@ class CopyCommitReferenceAnnotationAction(private val annotation: FileAnnotation
 				copyCommitReference(project, listOfMetadata)
 			}
 		}
+	}
+
+	override fun getActionUpdateThread(): ActionUpdateThread {
+		return ActionUpdateThread.EDT
 	}
 
 	override fun update(e: AnActionEvent) {
