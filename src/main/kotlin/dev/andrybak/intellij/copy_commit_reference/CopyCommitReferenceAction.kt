@@ -1,7 +1,7 @@
 package dev.andrybak.intellij.copy_commit_reference
 
+import com.intellij.openapi.actionSystem.ActionUpdateThread
 import com.intellij.openapi.actionSystem.AnActionEvent
-import com.intellij.openapi.actionSystem.UpdateInBackground
 import com.intellij.openapi.project.DumbAwareAction
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.vcs.VcsDataKeys
@@ -16,13 +16,17 @@ import com.intellij.vcs.log.VcsCommitMetadata
  * information: the reference format includes an abbreviated hash of the commit, subject line of the commit (first line
  * of the commit message), and the date in ISO 8601 format.
  */
-class CopyCommitReferenceAction : DumbAwareAction(), UpdateInBackground {
+class CopyCommitReferenceAction : DumbAwareAction() {
 	override fun actionPerformed(e: AnActionEvent) {
 		getCommitMetadataFromContext(e) { listOfMetadata: List<VcsCommitMetadata> ->
 			// non-nullity is enforced by method `update()`
 			val project: Project = e.project!!
 			copyCommitReference(project, listOfMetadata)
 		}
+	}
+
+	override fun getActionUpdateThread(): ActionUpdateThread {
+		return ActionUpdateThread.BGT
 	}
 
 	/**

@@ -2,7 +2,6 @@ package dev.andrybak.intellij.copy_commit_reference
 
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
-import com.intellij.openapi.actionSystem.UpdateInBackground
 import com.intellij.openapi.project.DumbAwareAction
 import com.intellij.openapi.vcs.annotate.AnnotationGutterActionProvider
 import com.intellij.openapi.vcs.annotate.FileAnnotation
