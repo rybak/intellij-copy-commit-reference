@@ -55,7 +55,7 @@ jobs:
 
       - name: Disable Gradle Welcome
         run: |
-          mkdir ~/.gradle
+          mkdir -p ~/.gradle
           echo "org.gradle.welcome=never" >>~/.gradle/gradle.properties
 
       # Validate wrapper
