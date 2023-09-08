@@ -3,7 +3,7 @@
 [![Build](https://github.com/rybak/intellij-copy-commit-reference/workflows/Build/badge.svg)][GitHubActions]
 [![Version](https://img.shields.io/jetbrains/plugin/v/22138-copy-commit-reference.svg)][Marketplace]
 [![Downloads](https://img.shields.io/jetbrains/plugin/d/22138-copy-commit-reference.svg)][Marketplace]
-<div style="background: #000 url(https://plugins.jetbrains.com/static/versions/28134/button-install.png) no-repeat;"><a href="https://plugins.jetbrains.com/plugin/22138-copy-commit-reference" style="color:#fff;">Get from Marketplace</a></div>
+<a href="https://plugins.jetbrains.com/plugin/22138-copy-commit-reference" style="color:#fff !important;background: #000 url(https://plugins.jetbrains.com/static/versions/28134/button-install.png) no-repeat;">Get from Marketplace</a>
 
 Plugin for IntelliJ-based IDEs.
 
