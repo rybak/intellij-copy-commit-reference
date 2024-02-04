@@ -4,9 +4,9 @@ import com.intellij.openapi.actionSystem.ActionUpdateThread
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.project.DumbAwareAction
+import com.intellij.openapi.vcs.actions.ShowAnnotateOperationsPopup
 import com.intellij.openapi.vcs.annotate.AnnotationGutterActionProvider
 import com.intellij.openapi.vcs.annotate.FileAnnotation
-import com.intellij.openapi.vcs.annotate.UpToDateLineNumberListener
 import com.intellij.util.PlatformIcons
 import org.jetbrains.annotations.NotNull
 
@@ -22,7 +22,7 @@ class CopyCommitReferenceAnnotationAction(private val annotation: FileAnnotation
 		CopyCommitReferenceBundle.messagePointer("action.devAndrybakCopyCommitReferenceAction.text"),
 		CopyCommitReferenceBundle.messagePointer("action.devAndrybakCopyCommitReferenceAction.description"),
 		PlatformIcons.COPY_ICON
-), UpToDateLineNumberListener {
+) {
 
 	private var lineNumber = -1
 
@@ -47,16 +47,9 @@ class CopyCommitReferenceAnnotationAction(private val annotation: FileAnnotation
 	}
 
 	override fun update(e: AnActionEvent) {
+		lineNumber = ShowAnnotateOperationsPopup.getAnnotationLineNumber(e.dataContext)
 		val enabled = e.project != null && lineNumber >= 0 && annotation.getLineRevisionNumber(lineNumber) != null
 		e.presentation.setEnabledAndVisible(enabled)
-	}
-
-	/**
-	 * Consumer the line number given to [UpToDateLineNumberListener]s, same as
-	 * [com.intellij.openapi.vcs.actions.CopyRevisionNumberFromAnnotateAction].
-	 */
-	override fun consume(upToDateLineNumber: Int) {
-		lineNumber = upToDateLineNumber
 	}
 }
 
